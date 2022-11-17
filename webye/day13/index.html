@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <!-- /** 企业发放的奖金根据利润提成。利润 
+(I) 低于或等于 10 万元时，奖金可提 10% ；
+利润高于 10 万元，低于 20 万元时，低于 10 万元的部分按 10% 提成，高于 10 万元的部分，可可提成 7.5% ；
+ 20 万到 40 万之间时，高于 20 万元的部分，可提成 5% ；
+  40 万到 60 万之间时高于 40 万元的部分，可提成 3% ；
+   60 万到 100 万之间时，高于 60 万元的部分，可提成 1.5% 
+   ，高于 100 万元时，超过 100 万元的部分按 1% 提成，
+   从键盘输入当月利润 I=374483 ，求应发放奖金总数*/ -->
+</head>
+<body>
+   <script type="text/javascript">
+   var x = prompt("请输入你的利润","1");
+   var bonus = 0;
+   if(x<=10){
+      bonus = x*0.1;
+   }else if(10<x<20){
+      bonus = 10*(10/100)+(x-10)*(7.5/100);
+   }else if(20<=x<40){
+      bonus = 10*(10/100)+10*(7.5/100)+(x-20)*(5/100);
+   }else if(40<=x<60){
+      bonus = 10*(10/100)+10*(7.5/100)+20*(5/100)+(x-40)*(3/100);
+   }else if(60<=x<100){
+      bonus = 10*(10/100)+10*(7.5/100)+20*(5/100)+20*(3/100)+(x-60)*(1/100);
+   }
+   document.write(bonus);
+   </script>
+</body>
+</html>
